@@ -9,9 +9,10 @@ module.exports = {
   development: {
     client: 'mysql2',
     connection: {
-      database: 'jackpot',
-      user:     'root',
-      password: '824Kjd13%'
+      database: process.env.DB_DATABASE,
+      user:     process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT
     },
     pool: {
       min: 2,
